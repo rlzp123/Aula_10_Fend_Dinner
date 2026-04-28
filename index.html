@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dinner by Moonlight</title>
 
+
+  <link rel="manifest" href="">
+
+
+   <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E88AC0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="./img/logo64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo64.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/logo64.png">
+    <link rel="icon" type="image/png" href="./img/logo64.png">
+    <link rel="shortcut icon" href="./img/logo64.png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="./images/logo64.png">
+    <meta property="og:image" content="./img/logo64.png">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -16,9 +31,9 @@
             retro: ['"Trebuchet MS"', 'sans-serif'],
           },
           colors: {
-            moon: '#1e293b',
-            neon: '#f43f5e',
-            cream: '#fff8e7'
+            moon: '#561D86',
+            neon: '#321250',
+            cream: '#EC4899'
           }
         }
       }
@@ -33,9 +48,9 @@
           retro: ['"Trebuchet MS"', 'sans-serif'],
         },
         colors: {
-          moon: '#1e293b',
-          neon: '#f43f5e',
-          cream: '#fff8e7'
+          moon: '#561D86',
+          neon: '#321250',
+          cream: '#EC4899'
         },
         animation: {
           float: "float 4s ease-in-out infinite",
@@ -56,6 +71,7 @@
   </script>
 
 </head>
+
 
 <body class="bg-gradient-to-b from-slate-900 via-slate-800 to-black text-cream font-retro">
 
@@ -108,6 +124,7 @@
     class="bg-slate-800 p-6 rounded-2xl shadow-xl mb-8 hover:scale-105 transition duration-300 flex gap-6 items-center">
     <img src="./img/dinner.png" class="w-28 h-28 object-cover rounded-xl">
     <div class="flex-1">
+
       <div class="flex justify-between items-center">
         <h3 class="text-2xl font-semibold">DINER BURGER</h3>
         <span class="text-pink-400 font-bold text-xl">R$ 36,50</span>
@@ -579,13 +596,14 @@
               }
             }
             inicializarCarrinho();
+
+            if ('serviceworker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service Worker Registrado no Porto!', reg)).catch(err => console.error('Erro ao preparar o sushi: ', err));
+            });
+        }
           </script>
-
-
-
-
-
-
 </body>
 
 </html>

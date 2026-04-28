@@ -1,0 +1,22 @@
+{
+    "name": "Dinner By Moonlight",
+    "short_name": "Dinner",
+    "start_url": "standalone",
+    "background_color": "#4F2085",
+    "theme_color": "#AD3982",
+    "description": "Cardápio digital Dinner By Moonlight",
+    "icons": [
+        {
+            "src": "img/logopwa.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "img/logo512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
